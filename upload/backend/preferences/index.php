@@ -66,7 +66,7 @@ if ($res_user->numRows() > 0)
 {
 	if( ($rec_user = $res_user->fetchRow()) )
 	{
-		$tpl_data['DISPLAY_NAME']	= $rec_user['display_name'];
+		$tpl_data['DISPLAY_NAME']	= htmlspecialchars($rec_user['display_name']);
 		$tpl_data['USERNAME']		= $rec_user['username'];
 		$tpl_data['EMAIL']			= $rec_user['email'];
 	}
